@@ -12,8 +12,11 @@
 mod features;
 pub use features::*;
 
-#[cfg(feature = "std")]
-pub mod vars;
+mod vars;
+pub use vars::*;
+
+mod varsets;
+pub use varsets::*;
 
 #[doc = include_str!("../../../README.md")]
 #[cfg(doctest)]

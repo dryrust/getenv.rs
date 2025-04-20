@@ -1,6 +1,6 @@
 // This is free and unencumbered software released into the public domain.
 
-use super::var;
+use crate::var;
 
 /// See: https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables
 pub fn git() -> Option<String> {

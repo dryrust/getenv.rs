@@ -1,6 +1,6 @@
 // This is free and unencumbered software released into the public domain.
 
-use super::var;
+use crate::var;
 
 /// See: https://specifications.freedesktop.org/basedir-spec/latest/#variables
 pub fn xdg_data_home() -> Option<String> {
