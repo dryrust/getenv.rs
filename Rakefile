@@ -28,6 +28,14 @@ namespace :varset do
       puts %{pub use #{varset}::*;}
     end
   end
+
+  task :readme do
+    puts %{Varset | Feature | Reference}
+    puts %{------ | ------- | ---------}
+    varsets.each do |varset|
+      puts %{#{varset} | `#{varset}` | [`use getenv::#{varset}::*;`](https://docs.rs/getenv/latest/getenv/varsets/#{varset}/index.html)}
+    end
+  end
 end
 
 def varsets

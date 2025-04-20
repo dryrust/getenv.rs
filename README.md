@@ -25,6 +25,14 @@
 cargo add getenv
 ```
 
+```toml
+getenv = 0.1
+```
+
+```toml
+getenv = { version = "0.1", default-features = false, features = ["posix"] }
+```
+
 ## 👉 Examples
 
 ### Importing the library
@@ -33,9 +41,41 @@ cargo add getenv
 use getenv::*;
 ```
 
+### Reading environment variables
+
+```rust
+use getenv::aws::*;
+
+println!("aws_access_key_id = {:?}", aws_access_key_id())
+println!("aws_secret_access_key = {:?}", aws_secret_access_key())
+```
+
 ## 📚 Reference
 
-TBD
+Varset | Feature | Reference
+:----- | :------ | :--------
+aws | `aws` | [`use getenv::aws::*;`](https://docs.rs/getenv/latest/getenv/varsets/aws/index.html)
+cargo | `cargo` | [`use getenv::cargo::*;`](https://docs.rs/getenv/latest/getenv/varsets/cargo/index.html)
+conda | `conda` | [`use getenv::conda::*;`](https://docs.rs/getenv/latest/getenv/varsets/conda/index.html)
+cuda | `cuda` | [`use getenv::cuda::*;`](https://docs.rs/getenv/latest/getenv/varsets/cuda/index.html)
+docker | `docker` | [`use getenv::docker::*;`](https://docs.rs/getenv/latest/getenv/varsets/docker/index.html)
+git | `git` | [`use getenv::git::*;`](https://docs.rs/getenv/latest/getenv/varsets/git/index.html)
+go | `go` | [`use getenv::go::*;`](https://docs.rs/getenv/latest/getenv/varsets/go/index.html)
+homebrew | `homebrew` | [`use getenv::homebrew::*;`](https://docs.rs/getenv/latest/getenv/varsets/homebrew/index.html)
+java | `java` | [`use getenv::java::*;`](https://docs.rs/getenv/latest/getenv/varsets/java/index.html)
+locale | `locale` | [`use getenv::locale::*;`](https://docs.rs/getenv/latest/getenv/varsets/locale/index.html)
+macos | `macos` | [`use getenv::macos::*;`](https://docs.rs/getenv/latest/getenv/varsets/macos/index.html)
+near | `near` | [`use getenv::near::*;`](https://docs.rs/getenv/latest/getenv/varsets/near/index.html)
+node | `node` | [`use getenv::node::*;`](https://docs.rs/getenv/latest/getenv/varsets/node/index.html)
+openssl | `openssl` | [`use getenv::openssl::*;`](https://docs.rs/getenv/latest/getenv/varsets/openssl/index.html)
+posix | `posix` | [`use getenv::posix::*;`](https://docs.rs/getenv/latest/getenv/varsets/posix/index.html)
+proxy | `proxy` | [`use getenv::proxy::*;`](https://docs.rs/getenv/latest/getenv/varsets/proxy/index.html)
+python | `python` | [`use getenv::python::*;`](https://docs.rs/getenv/latest/getenv/varsets/python/index.html)
+ruby | `ruby` | [`use getenv::ruby::*;`](https://docs.rs/getenv/latest/getenv/varsets/ruby/index.html)
+rust | `rust` | [`use getenv::rust::*;`](https://docs.rs/getenv/latest/getenv/varsets/rust/index.html)
+ssh | `ssh` | [`use getenv::ssh::*;`](https://docs.rs/getenv/latest/getenv/varsets/ssh/index.html)
+windows | `windows` | [`use getenv::windows::*;`](https://docs.rs/getenv/latest/getenv/varsets/windows/index.html)
+xdg | `xdg` | [`use getenv::xdg::*;`](https://docs.rs/getenv/latest/getenv/varsets/xdg/index.html)
 
 ## 👨‍💻 Development
 
