@@ -11,7 +11,7 @@
 
 - Implements a comprehensive set of environment variable getters for
   various platforms, programming languages, and tools.
-- Provides a wide range of varsets (variable sets), including:
+- Provides a wide range of varsets (variable sets), including for:
   AWS, Cargo, Conda, CUDA, Docker, Git, Go, Homebrew, Java,
   Locale, macOS, NEAR, Node.js, OpenSSL, POSIX, Proxy,
   Python, Ruby, Rust, SSH, Windows, and XDG.
@@ -32,14 +32,14 @@
 cargo add getenv
 ```
 
-### Installation via Cargo (with all features enabled)
+### Installation in `Cargo.toml` (with all features enabled)
 
 ```toml
 [dependencies]
-getenv = 0.1
+getenv = "0.1"
 ```
 
-### Installation via Cargo (with only specific features enabled)
+### Installation in `Cargo.toml` (with only specific features enabled)
 
 ```toml
 [dependencies]
@@ -59,8 +59,8 @@ use getenv::*;
 ```rust
 use getenv::aws::*;
 
-println!("AWS_ACCESS_KEY_ID={:?}", aws_access_key_id())
-println!("AWS_SECRET_ACCESS_KEY={:?}", aws_secret_access_key())
+println!("AWS_ACCESS_KEY_ID={:?}", aws_access_key_id());
+println!("AWS_SECRET_ACCESS_KEY={:?}", aws_secret_access_key());
 ```
 
 ## 📚 Reference
