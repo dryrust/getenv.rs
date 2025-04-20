@@ -9,6 +9,13 @@
 
 ## ✨ Features
 
+- Implements a comprehensive set of environment variable getters for
+  various platforms, programming languages, and tools.
+- Provides a wide range of varsets (variable sets), including:
+  AWS, Cargo, Conda, CUDA, Docker, Git, Go, Homebrew, Java,
+  Locale, macOS, NEAR, Node.js, OpenSSL, POSIX, Proxy,
+  Python, Ruby, Rust, SSH, Windows, and XDG.
+- Treats empty environment variables the same as missing ones.
 - Supports opting out of any feature using comprehensive feature flags.
 - Adheres to the Rust API Guidelines in its [naming conventions].
 - 100% free and unencumbered public domain software.
@@ -25,11 +32,17 @@
 cargo add getenv
 ```
 
+### Installation via Cargo (with all features enabled)
+
 ```toml
+[dependencies]
 getenv = 0.1
 ```
 
+### Installation via Cargo (with only specific features enabled)
+
 ```toml
+[dependencies]
 getenv = { version = "0.1", default-features = false, features = ["posix"] }
 ```
 
@@ -46,8 +59,8 @@ use getenv::*;
 ```rust
 use getenv::aws::*;
 
-println!("aws_access_key_id = {:?}", aws_access_key_id())
-println!("aws_secret_access_key = {:?}", aws_secret_access_key())
+println!("AWS_ACCESS_KEY_ID={:?}", aws_access_key_id())
+println!("AWS_SECRET_ACCESS_KEY={:?}", aws_secret_access_key())
 ```
 
 ## 📚 Reference
