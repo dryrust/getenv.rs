@@ -16,9 +16,53 @@ publish.workspace = true
 
 [features]
 default = ["all", "std"]
-all = []
 std = ["dogma/std"]
-unstable = []
+all = [
+    "aws",
+    "cargo",
+    "conda",
+    "cuda",
+    "docker",
+    "git",
+    "go",
+    "homebrew",
+    "java",
+    "locale",
+    "macos",
+    "near",
+    "node",
+    "openssl",
+    "posix",
+    "proxy",
+    "python",
+    "ruby",
+    "rust",
+    "ssh",
+    "windows",
+    "xdg",
+]
+aws = []
+cargo = []
+conda = []
+cuda = []
+docker = []
+git = []
+go = []
+homebrew = []
+java = []
+locale = []
+macos = []
+near = []
+node = []
+openssl = []
+posix = []
+proxy = []
+python = []
+ruby = []
+rust = []
+ssh = []
+windows = []
+xdg = []
 
 [dev-dependencies]
 
