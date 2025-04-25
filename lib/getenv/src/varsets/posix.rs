@@ -61,3 +61,8 @@ pub fn tz() -> Option<String> {
 pub fn user() -> Option<String> {
     var("USER")
 }
+
+/// See: https://no-color.org
+pub fn no_color() -> Option<bool> {
+    var("NO_COLOR").map(|s| s == "1")
+}
