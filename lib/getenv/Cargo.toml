@@ -17,6 +17,7 @@ publish.workspace = true
 [features]
 default = ["all", "std"]
 std = ["dogma/std"]
+sys = ["locale", "macos", "openssl", "posix", "proxy", "windows", "xdg"]
 all = [
     "aws",
     "cargo",
