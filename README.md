@@ -15,6 +15,9 @@
   AWS, Cargo, Conda, CUDA, Docker, Git, Go, Homebrew, Java,
   Locale, macOS, NEAR, Node.js, OpenSSL, POSIX, Proxy,
   Python, Ruby, Rust, SSH, Windows, and XDG.
+- Protects sensitive environment variables (such as API keys) by preventing
+  their accidental copying, logging, or other exposure, and securely wiping
+  them from memory when dropped.
 - Treats empty environment variables the same as missing ones.
 - Supports opting out of any feature using comprehensive feature flags.
 - Adheres to the Rust API Guidelines in its [naming conventions].
@@ -90,6 +93,14 @@ ssh | `ssh` | [`use getenv::ssh::*;`](https://docs.rs/getenv/latest/getenv/varse
 windows | `windows` | [`use getenv::windows::*;`](https://docs.rs/getenv/latest/getenv/varsets/windows/index.html)
 xdg | `xdg` | [`use getenv::xdg::*;`](https://docs.rs/getenv/latest/getenv/varsets/xdg/index.html)
 
+### Integrations
+
+Crate (Feature) | Version | Usage | Summary
+:--- | :--- | :--- | :---
+[miette] &nbsp;<sub>(`"miette"`)</sub> | 7.5 | [![miette](https://docs.rs/miette/badge.svg)](https://docs.rs/miette/) | Enhances `dogma::{IriError, UriError}`
+[serde] &nbsp;<sub>(`"serde"`)</sub> | 1 | [![serde](https://docs.rs/serde/badge.svg)](https://docs.rs/serde/) | Derives `serde::{Serialize, Deserialize}`
+<img width="220" height="1"/> | <img width="110" height="1"/> | <img width="100" height="1"/> | &nbsp;
+
 ## 👨‍💻 Development
 
 ```bash
@@ -105,3 +116,6 @@ git clone https://github.com/dryrust/getenv.rs.git
 [![Share on LinkedIn](https://img.shields.io/badge/share%20on-linkedin-3949AB?logo=linkedin)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/dryrust/getenv.rs)
 
 [naming conventions]: https://rust-lang.github.io/api-guidelines/naming.html
+
+[miette]: https://crates.io/crates/miette
+[serde]: https://crates.io/crates/serde

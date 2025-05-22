@@ -6,11 +6,13 @@
 //! # use getenv::*;
 //! ```
 
-#![deny(unsafe_code)]
+#![forbid(unsafe_code)]
 #![allow(unused)]
 
 mod features;
 pub use features::*;
+
+pub use secrecy;
 
 mod vars;
 pub use vars::*;
