@@ -1,7 +1,7 @@
 # Getenv.rs
 
 [![License](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](https://unlicense.org)
-[![Compatibility](https://img.shields.io/badge/rust-1.81%2B-blue)](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html)
+[![Compatibility](https://img.shields.io/badge/rust-1.81%2B-blue)](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0/)
 [![Package](https://img.shields.io/crates/v/getenv)](https://crates.io/crates/getenv)
 [![Documentation](https://docs.rs/getenv/badge.svg)](https://docs.rs/getenv/)
 
@@ -19,7 +19,7 @@
   their accidental copying, logging, or other exposure, and securely wiping
   them from memory when dropped.
 - Treats empty environment variables the same as missing ones.
-- Supports opting out of any feature using comprehensive feature flags.
+- Supports opting out of any feature using comprehensive [feature flags].
 - Adheres to the Rust API Guidelines in its [naming conventions].
 - 100% free and unencumbered public domain software.
 
@@ -51,7 +51,7 @@ getenv = { version = "0.1", default-features = false, features = ["posix"] }
 
 ## 👉 Examples
 
-### Importing the library
+### Importing the Library
 
 ```rust
 use getenv::*;
@@ -115,6 +115,7 @@ git clone https://github.com/dryrust/getenv.rs.git
 [![Share on Facebook](https://img.shields.io/badge/share%20on-fb-1976D2?logo=facebook)](https://www.facebook.com/sharer/sharer.php?u=https://github.com/dryrust/getenv.rs)
 [![Share on LinkedIn](https://img.shields.io/badge/share%20on-linkedin-3949AB?logo=linkedin)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/dryrust/getenv.rs)
 
+[feature flags]: https://github.com/dryrust/getenv.rs/blob/master/lib/getenv/Cargo.toml
 [naming conventions]: https://rust-lang.github.io/api-guidelines/naming.html
 
 [miette]: https://crates.io/crates/miette
