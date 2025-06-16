@@ -68,5 +68,5 @@ xdg = []
 [dev-dependencies]
 
 [dependencies]
-dogma = { version = "0.1", default-features = false }
+dogma = { version = "0.1.9", default-features = false }
 secrecy = { version = "0.10", default-features = false }
